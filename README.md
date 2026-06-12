@@ -4,7 +4,7 @@ Made by 0725bubz
 - mrkermit072 on YouTube
 
 Just a little python file that crashes Termux and iSH.
-#
+
 
 ## Setup
 1. Install Python3
