@@ -6,7 +6,7 @@ Made by 0725bubz
 Just a little python file that crashes Termux and iSH.
 #
 
-# Setup
+## Setup
 1. Install Python3
 - Termux
 ```bash
